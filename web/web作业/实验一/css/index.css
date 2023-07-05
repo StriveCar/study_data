@@ -1,0 +1,180 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+.tit{
+    width: 1473px;
+    height: 782px;
+}
+.header{
+    height: 82px;
+    width: 1200px;
+    margin: 0 136px;
+    position: relative;
+}
+.logo img{
+    margin-left: 0px;
+}
+.header .buycar {
+    position: absolute;
+    top: 35px;
+    left: 250px;
+    font-size: 19px;
+    color: #333;
+}
+.tit-top{
+    color: red;
+    width: 1200px;
+    height: 24px;
+    margin: 25px 136px 5px 136px;
+    position: relative;
+}
+.tit-top:after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    width: 65px;
+    height: 3px;
+    background-color: red;
+}
+.tit-con{
+    background-color: #F5F5F5;
+    width: 1200px;
+    height: 38px;
+    display: flex;
+    margin: 10px 136px 10px 136px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 10px;
+}
+.con-1,.con-2{
+    display: flex;
+    width: 600px;
+    height: 38px;
+}
+.tit-con .con-2{
+    justify-content: space-around;
+}
+.con-good{
+    width: 555px;
+}
+.shop{
+    font-size: 10px;
+    width: 1200px;
+}
+.shop img{
+    width: 100px;
+    margin-left: 20px;
+}
+.shop-content{
+    width: 1200px;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid #D1D1D1;
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin: 25px 136px 10px 136px;
+}
+.commod-1,.commod-2{
+    display: flex;
+    width: 600px;
+    height: 38px;
+}
+.commod-1 input{
+    position: absolute;
+    margin-top: 12px;
+}
+.commod-2{
+    justify-content: space-around;
+}
+input{
+    cursor: default;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+}
+.shop-brief p{
+    line-height: 25px;
+    word-wrap:break-word;
+}
+
+.shop-account{
+    position: relative;
+    right: 40px;
+}
+.btn-box {
+    width: 100px;
+    height: 30px;
+}
+.btn-box div {
+    font-size: 16px;
+    float: left;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #b3b0a8;
+}
+.btn-box .number {
+    width: 40%;
+    border-left: none;
+    border-right: none;
+}
+.btn-box .number input {
+    width: 100%;
+    font-size: 16px;
+    margin: 0;
+    border: none;
+    text-align: center;
+}
+.shopDel{
+    flex: 3;
+}
+.settle-account {
+    width: 1200px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #cfcfcf;
+    box-sizing: border-box;
+    padding: 20px 0;
+    margin-left: 136px;
+}
+.fot-1,.fot-2{
+    display: flex;
+}
+.kkx{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+.kkx a{
+    display: block;
+    margin-left: 10px;
+}
+.account-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: red;
+}
+.settle-account .skip {
+    width: 150px;
+    height: 70px;
+    background-color: #c60000;
+    color: white;
+    position: relative;
+    top: -20px;
+    right: -23px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 70px;
+    cursor: pointer;
+}

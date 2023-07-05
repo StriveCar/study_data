@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车结算页</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <h1><a href="index.html" title="品优购商城"><img src="../static/pinyou.jpg" alt=""></a></h1>
+        </div>
+        <div class="buycar">购物车</div>
+    </div>
+
+    <div class="account w">
+        <div class="tit">
+            <div class="tit-top"><span class="red">全部商品</span></div>
+            <div class="tit-con">
+                <div class="con-1">
+                    <div><input type="checkbox" name="allChecked" id="" value="" class="con-inp" />全选</div>
+                    <div class="con-good">商品</div>
+                </div>
+                <div class="con-2">
+                    <div>单价</div>
+                    <div>数量</div>
+                    <div>小计</div>
+                    <div>操作</div>
+                </div>
+            </div>
+
+            <div class="shop">
+                <div class="shop-content">
+                    <div class="commod-1">
+                        <div>
+                            <input type="checkbox" name="shopB" id="" value="" class="shopB"/>
+                            <img src="../static/149a55c7db655a57bce72528466c6bbc.png">
+                        </div>
+                        <div class="shop-brief">
+                            <p class="long-tit">Xiaomi 12S</p>
+                            <p>骁龙8+ 旗舰处理器 | 单手可握好手感</p>
+                            <p>徕卡光学镜头 | 徕卡原生双画质</p>
+                            <p>4500mAh大电量 | 6.28″AMOLED屏幕</p>
+                        </div>
+                    </div>
+                    <div class="commod-2">
+                        <div class="shop-price">￥3999.00</div>
+                        <div class="shop-number">
+                            <div class="btn-box">
+                                <div class="reduce"><a href="javaScript:;">-</a></div>
+                                <div class="number"><input type="text" value="1" class="shopC"></div>
+                                <div class="add style-red"><a href="javaScript:;">+</a></div>
+                            </div>
+                        </div>
+                        <div class="shop-account">3999.00</div>
+                        <div class="shop-oper">
+                            <p class="shopDel"><a href="javaScript:;">删除</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-content">
+                    <div class="commod-1">
+                        <div>
+                            <input type="checkbox" name="shopB" id="" value="" class="shopB"/>
+                            <img src="../static/202207011810_86ad513472d1423a3fdec8d7d5107038.png">
+                        </div>
+                        <div class="shop-brief">
+                            <p class="long-tit">Xiaomi 12S Ultra</p>
+                            <p>徕卡专业光学镜头｜骁龙8+ 旗舰处理器</p>
+                            <p>1 英寸大底专业主摄｜小米澎湃 P1 快充芯片</p>
+                            <p>全场景疾速抓拍｜IP68级防尘防水</p>
+                        </div>
+                    </div>
+                    <div class="commod-2">
+                        <div class="shop-price">￥5999.00</div>
+                        <div class="shop-number">
+                            <div class="btn-box">
+                                <div class="reduce"><a href="javaScript:;">-</a></div>
+                                <div class="number"><input type="text" value="1" class="shopC"></div>
+
+                                <div class="add style-red"><a href="javaScript:;">+</a></div>
+                            </div>
+                        </div>
+                        <div class="shop-account">5999.00</div>
+                        <div class="shop-oper">
+                            <p class="shopDel"><a href="javaScript:;">删除</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-content">
+                    <div class="commod-1">
+                        <div>
+                            <input type="checkbox" name="shopB" id="" value="" class="shopB"/>
+                            <img src="../static/d1e0bcbbcb21c4c7b23126f9d35a0bd8.png">
+                        </div>
+                        <div class="shop-brief">
+                            <p class="long-tit">Xiaomi 12S Pro</p>
+                            <p>骁龙8+ 旗舰处理器 | 徕卡光学镜头</p>
+                            <p>徕卡原生双画质 | 徕卡水印、大师镜头包</p>
+                            <p>小米自研澎湃P1芯片 | 120W小米澎湃秒充 </p>
+                        </div>
+                    </div>
+                    <div class="commod-2">
+                        <div class="shop-price">￥4699.00</div>
+                        <div class="shop-number">
+                            <div class="btn-box">
+                                <div class="reduce"><a href="javaScript:;">-</a></div>
+                                <div class="number"><input type="text" value="1"class="shopC"></div>
+
+                                <div class="add style-red"><a href="javaScript:;">+</a></div>
+                            </div>
+                        </div>
+                        <div class="shop-account">4699.00</div>
+                        <div class="shop-oper">
+                            <p class="shopDel"><a href="javaScript:;">删除</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settle-account">
+                <div class="fot-1">
+                    <div><input type="checkbox" name="allChecked" id="" value="" class="con-inp" />全选</div>
+                    <div class="kkx">
+                        <a href="javaScript:;" class="delChoose">删除选中的商品</a>
+                        <a href="javaScript:;">清空购物车</a>
+                    </div>
+                </div>
+                <div class="fot-2">
+                    <div>已选择<span class="total-amount" style="color: red; font-size: 16px;padding: 0 5px;">0</span>件商品
+                        总价：
+                    </div>
+                    <div>
+                        <span class="account-price">￥0.00</span>
+                    </div>
+                    <div class="skip">
+                        <a href="submit.html" style="font-size: 22px; color: white;">去结算</a>
+                    </div>
+                </div>
+            </div>
+    <script src="../js/index.js"></script>
+
+</body>
+
+</html>

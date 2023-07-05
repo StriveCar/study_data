@@ -1,0 +1,46 @@
+.amount-warp {
+  display: flex;
+}
+.amount-warp input {
+  width: 31px;
+  height: 31px;
+  line-height: 30px;
+  padding-left: 10px;
+  outline: none;
+}
+.amount-warp .quick-button i {
+  display: block;
+  width: 30px;
+  height: 16px;
+  border-left: none;
+  text-align: center;
+  line-height: 16px;
+  cursor: pointer;
+}
+.amount-warp .quick-button .el-icon-arrow-up {
+  border-bottom: none;
+}
+.amount-warp .quick-button i:hover {
+  color: #EF001C;
+}
+.cart-option {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #999999;
+}
+.cart-option .delete {
+  margin-left: 20px;
+  cursor: pointer;
+}
+.cart-option .common {
+  margin-right: 30px;
+}
+.cart-option .common .total-num {
+  margin: 0 5px;
+}
+.cart-option .common .total-price {
+  font-size: 24px;
+  font-weight: 700;
+  vertical-align: bottom;
+}

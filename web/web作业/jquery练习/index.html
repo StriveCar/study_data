@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+  </head>
+  <body>
+    <div class="demo">
+      <p></p>
+    </div>
+    <p></p>
+    <span></span>
+    <ul>
+      <li><p></p></li>
+      <li><p></p></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <input type="text" />
+    <input type="checkbox" />
+    <script>
+    $('body').height(600)
+    $('body').width(1700)
+      $("ul p").css({
+          "background-color":"red"
+      });//设置样式
+      $("ul p").height(30)
+      $('ul p').width(100)
+      console.log($("ul p").height(),$('ul p').width());
+      console.log($(window).scrollTop(),$(window).scrollLeft());
+      // console.log($("div").toggleClass("new"));
+      // $('.demo').attr({
+      //     'class':'kkx',
+      //     'name':'as'
+      // })
+      // console.log($("div").attr('class'));
+      // // console.log($("div").attr('class','demo'));
+      // // console.log($("div").attr('name','kkx'));
+      // console.log($("div").attr('name'));
+      // $('input').prop('checked',true)
+      // $('ul').slideDown()
+      // setTimeout(()=>{
+      //     $('ul').slideUp()
+      // },2000)
+      var $a = $("<a></a>");
+      var $ul = $("ul").clone(true); //复制元素
+      $(".demo").prepend($a);
+      $(".demo").prepend($ul);
+      $(".demo").empty(); //清空后代
+      $("input:eq(0)").on("blur", () => {
+        console.log($("input:eq(0)").val());
+      }).keypress((even) => {
+        if (even.which === 13) console.log($("input:eq(0)").val());
+      });
+      $('p:eq(1)').html('<a>卡卡西</a>')
+      $('p:eq(0)').text('<a>卡卡西</a>')
+    </script>
+  </body>
+</html>

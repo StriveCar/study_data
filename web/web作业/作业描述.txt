@@ -1,0 +1,173 @@
+整个鼠标悬停效果可分为两部分，一是悬浮效果，二是选中的列表变色。
+
+悬浮效果
+鼠标悬停效果我们可以使用hover伪类实现（文字颜色变淡）
+
+<div class="text">实践课程</div>
+.text{
+    opacity: .7;
+}
+tips：当值为小于1的小数时，可以不写前面的0，当值为0像素时可以省略后面的像素单位。下面举个例子：
+
+.text{
+    background: rgba(0,0,0,.7);
+    opacity: .7;
+    margin: 0 15px 15px 0;
+}
+这样有利于与其他属性进行区分。
+
+选中列表变色
+蓝色选中样式则需要使用到伪元素:after，该写法在实际开发过程中会大量使用
+
+<div class="parent-wrap">
+    <div><span class="nav-text">导航1</span></div>
+    <div><span class="nav-text">导航2</span></div>
+    <div><span class="nav-text">导航3</span></div>
+    <div><span class="nav-text">导航4</span></div>
+</div>
+.parent-wrap{
+    height: 60px;
+    width: 500px;
+    display: flex;
+    background: #cccccc;
+}
+.parent-wrap > div{
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.nav-text{
+    position: relative;
+}
+
+
+如图，我们实现了一个简单的导航，只需要再加一个选中类（实际开发中会通过js动态控制选中类）即可实现效果。
+
+/*选中类样式，文字颜色改变*/
+.active{
+    color: #459be5;
+}
+/*底部出现横杠*/
+.active:after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+    width: 14px;
+    background-color: #459be5;
+}
+我们只需要给需要加上样式的元素加上该类即可实现效果：
+
+<span class="nav-text active">导航1</span>
+
+
+
+说明：文字居中此处为什么使用flex布局的justify-content: center;align-items: center; 而不使用line-height:60px;text-align:center解释如下 —— 使用line-height垂直居中在文字超过一行的情况下会出现两行文字之间相差60px的问题。
+
+举个例子：我们将导航1文字加长
+
+<span class="nav-text">导航1导航1导航1导航1</span>
+
+运行效果：
+
+
+
+很明显，第四个导航1文字超出了容器，正是由于使用了line-height:60px导致，使用flex布局居中则可以很好的避免这一问题。
+
+
+比较运算符
+JavaScript中的比较运算符有==,===,>,<,!=,>=等。
+
+==叫做相等，===叫做严格相等。双等号和三等号的区别是：三等号要求数据类型和值都相等，双等号只需要值相等即可，相等包含严格相等。
+从比较过程来看，严格相等先比较两个对象的数据类型是否相等，不相等则结束比较，返回false，相等在数据类型不同时，尝试进行数据类型转换，例如，在字符串和数字的比较中，字符串会被转为数字再比较；布尔值true转为数字1，布尔值false转为数字0。
+
+如果数据类型相同，相等和严格相等都会直接比较值，值相等返回true。
+
+需要特别注意的是，以上仅仅适用于非对象类型。对于对象类型，相等或者严格相等比较的都是对象的引用，而不是具体的值，就是说，一个对象和其他任何对象都是不相等的，即使两者属性、值都相等。下面给出一些例子：
+
+var stringVariable = "2";
+var number1 = 2;
+var number2 = 2;
+console.log(stringVariable == number1);//true
+console.log(stringVariable === number1);//false
+console.log(number1 === number2);//true
+var studentA = {
+name:"Bob",
+age:22
+}
+var studentB = {
+name:"Bob",
+age:22
+}
+console.log(studentA == studentB);//false，因为不是同一个对象
+var studentC = studentA;
+console.log(studentA == studentC);//true，因为是同一个对象
+将studentA赋值给studentC，这时studentC和studentA指向内存中的同一个地址块，视为同一个对象，所以两者相等。
+
+不等 对应于上面的等号，不等号也有两种：!=和!==。 !=和==互为相反，==成立，!=一定不成立。 !==和===互为相反，严格相等成立，则严格不相等不成立。
+其它 大于，小于，大于等于，小于等于的比较规则如下： 比较的两个对象都是数字，按照数学中数字的比较方法。 数字和字符串比较，字符串转为数字后再比较。 字符串和字符串比较，从第一个字符开始，逐个比较，发现不相等立即返回。字符按照ASCII编码值的大小比较，一般只要记住：数字<大写字母<小写字母，字母a小于字母z，A小于Z， 比较过程中，当一个字符串结束另外一个字符串还有，还没有比较出大小，则长的字符串较大。
+var number1 = 1;//定义变量number1
+var number2 = 2;//定义变量number2
+var string1 = "3";//string1
+var lowerLetter = "a";//定义变量lowerLetter
+var upperLetter = "A";//定义变量upperLetter
+var string1 = "aa";//定义变量string1
+var String2 = "ab";//定义变量String2
+console.log(number1<number2);//输出true
+console.log(number2<string1);//输出true
+console.log(upperLetter<lowerLetter);//输出true
+console.log(lowerLetter<string1);//输出false
+console.log(string1<string2);//输出true
+逻辑运算符
+在介绍逻辑运算符之前，我们必须明确逻辑运算符的操作数只能是布尔型，其他类型都会被转换为布尔型：除了0，null，undefined，""外，其他的值转换为布尔值都是true。
+
+逻辑与
+逻辑与有两个操作数，中间用&&连接，只有两个操作数都是true结果才是true；
+其中一个操作数不是布尔型，当左操作数为真值时，返回右操作数。当左操作数为假值时，返回左操作数。
+
+逻辑或
+逻辑或同样有两个操作数，用||连接，至少有一个操作数为true时结果为true；
+其中一个操作数不是布尔型，当左操作数为真值时，返回左操作数。当左操作数为假值时，返回右操作数。
+
+逻辑非
+逻辑非只有一个操作数，!后连接操作数或表达式，意思是将操作数取反；
+如果操作数不是布尔型，编译器首先将其他类型转换为布尔型，然后返回true或者false。
+
+console.log(true&&false);//false
+console.log(true||false);//true
+console.log(!false);//true
+var number1 = 1;
+var number2 = 0;
+var string = "a";
+console.log(number1&&string);//输出字符串"a"
+console.log(number1||string);//输出数字1
+console.log(!number1);//false
+
+3
+
+name:HangZhou,country:Chine,population:9400000,
+
+1
+
+name:Leaf Prak,location:Fifth Avenue,todayTourists:4000,
+
+getOddNumber;1,-1,-3,3
+
+4
+
+getOddNumber;1
+
+1
+
+
+getEvenNumber;2
+
+1
+
+getEvenNumber;1,2,3,4,5
+
+2

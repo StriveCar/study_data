@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jsindex/echarts.js"></script>
+    <style>
+        .div{
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div"></div>
+    <script>
+        var div=echarts.init(document.querySelector('.div'),'dark')
+        function rom(){
+            var array=[]
+            for(var i=0; i<7; i++){
+                var num=parseInt(Math.random()*90+10);
+                array.push(num)
+            }
+            return array;
+        }
+        var option={
+            title:{
+                text:'车车',
+            },
+            tooltip:{},
+            legend:{
+                data:['人数']
+            },
+            xAxis:{
+                data:['mon','tue','wed','thu','feb','mar','apist']
+            },
+            yAxis:{},
+            series:[
+                {
+                    name:'人数',
+                    type:'bar',
+                    data:rom()
+                }
+            ]
+        }
+        div.setOption(option)
+    </script>
+</body>
+</html>

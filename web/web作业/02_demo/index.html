@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jsindex/echarts.js"></script>
+    <style>
+        .demo {
+            width: 800px;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo"></div>
+    <script>
+        var div = echarts.init(document.querySelector('.demo'))
+        let data = []
+        var now = new Date(2022, 9, 0)
+        var oneday = 24 * 3600 * 1000
+        var value = Math.random() * 500 + 500
+        for (var i = 0; i < 30; i++) {
+            now = new Date(now.getTime() + oneday)
+            var value = value + (Math.random() * 2 - 1) * 100
+            data.push({
+                name: now.toString(),
+                value: [
+                    [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
+                    Math.round(value)
+                ]
+            })
+        }
+        console.log(data);
+        var option = {
+            //设置标题
+            title: {
+                text: '车车',
+                subtext:'卡卡西',
+                textAlign: 'left',
+            },
+            //设置提示框,鼠标悬浮时的提示内容
+            tooltip: {
+                trigger: 'axis',//通过坐标轴显示
+                // formatter: function (params) {//显示的内容
+                //     data = params[0].data.value
+                //     x = data[0]
+                //     y = data[1]
+                //     console.log(params);
+                //     return `时间:${x} 股票价格:${y}`
+                // },
+                axisPointer: {
+                    animation: false,//开启鼠标悬浮动画效果
+                }
+            },
+            // 配置x轴
+            xAxis: {
+                name:'股票数据',
+                type: 'category',//时间轴，适用于连续的时序数据，
+                data:[1,23,44,42,2],
+                splitLine: {//x轴网格是否显示
+                    show: false,//是否显示分隔线。默认数值轴显示，类目轴不显示。
+                },
+            },
+            yAxis: [{
+                name:'跌幅',
+                type: 'value',//数值轴，适用于连续数据。
+                // position:'left',
+                splitLine: {
+                    show: true,//是否显示分隔线。默认数值轴显示，类目轴不显示。
+                },
+                boundaryGap: [0, '100%']//坐标轴两边留白策略，类目轴和非类目轴的设置和表现不一样。
+            },{
+                type: 'value',
+                // position:'right',
+                min:0,
+                max:250,
+                splitLine:{
+                    show: false,//是否显示分隔
+                }
+            }],
+            series: [
+                {
+                    name: '股票数据',
+                    type: 'line',
+                    data: [10,2,34,444,],
+                    yAxisIndex:0,
+                    color:['#C35F58','#4B7CF3','#dd3ee5','#12e78c','#fe8104','#01C2F9','#F4CB29','#FD9E06']
+                },{
+                    name:'跌幅',
+                    type:'bar',
+                    smooth:true,
+                    yAxisIndex:1,
+                    data:[123,12,34,56,12]
+                }
+            ]
+        }
+
+        div.setOption(option)
+
+        // setInterval(()=>{
+        //     now = new Date(now.getTime() + oneday)
+        //     value = value + (Math.random() * 2 - 1) * 50
+        //     data.shift()
+        //     data.push({
+        //         name: now.toString(),
+        //         value: [
+        //             [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
+        //             Math.round(value)
+        //         ]
+        //     })
+        //     div.setOption({
+        //         series:[{
+        //             data:data
+        //         }]
+        //     })
+        // },2000)
+    </script>
+</body>
+
+</html>

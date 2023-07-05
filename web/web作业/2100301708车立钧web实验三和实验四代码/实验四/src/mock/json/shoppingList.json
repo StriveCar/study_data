@@ -1,0 +1,72 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": {
+    "list": [
+      {
+        "id": 1,
+        "title": "Xiaomi 12S Ultra",
+        "description": "冷杉绿 12G+512G",
+        "price": "5899",
+        "count": 3,
+        "imgurl": "https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202207011810_86ad513472d1423a3fdec8d7d5107038.png"
+      },
+      {
+        "id": 2,
+        "title": "Xiaomi 12S Pro",
+        "description": "原野绿 12G+256G",
+        "price": "4129",
+        "count": 1,
+        "imgurl": "https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202207012000_0b9df066c110f201154013ac373df1d9.png"
+      },
+      {
+        "id": 3,
+        "title": "Xiaomi 11 Ultra",
+        "description": "陶瓷黑 12G+512G",
+        "price": "4699",
+        "count": 4,
+        "imgurl": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cea1ff3517387569b7f59fc2b7d01d30.png"
+      },
+      {
+        "id": 4,
+        "title": "Xiaomi 11 Pro",
+        "description": "黑色 12G+256G",
+        "price": "3379",
+        "count": 6,
+        "imgurl": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2237d83d46b43a7dca0b5fb6db2a9700.png"
+      },
+      {
+        "id": 5,
+        "title": "Redmi K50 至尊版",
+        "description": "银迹 12G+512G",
+        "price": "3699",
+        "count": 4,
+        "imgurl": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1660117297.65685839.png"
+      },
+      {
+        "id": 6,
+        "title": "Redmi Note 12 pro+",
+        "description": "子夜黑 12G+256G",
+        "price": "2299",
+        "count": 1,
+        "imgurl": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1666797744.53052254.png"
+      },
+      {
+        "id": 7,
+        "title": "iPhone 14 Pro",
+        "description": "暗紫 6G+512G",
+        "price": "10299",
+        "count": 1,
+        "imgurl": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone14pro-digitalmat-gallery-5-202209?wid=364&hei=333&fmt=png-alpha&.v=1663346233360"
+      },
+      {
+        "id": 8,
+        "title": "iPhone 14 Pro Max",
+        "description": "暗紫色 6G+512G",
+        "price": "12999",
+        "count": 1,
+        "imgurl": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone14pro-digitalmat-gallery-5-202209?wid=364&hei=333&fmt=png-alpha&.v=1663346233360"
+      }
+    ]
+  }
+}
